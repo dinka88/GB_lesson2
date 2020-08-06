@@ -12,18 +12,24 @@ public class Main {
 
         score(words);
         PhoneBook book = new PhoneBook();
-        book.add(9161254578L, "Петров");
-        book.add(9165478963L, "Иванов");
-        book.add(9165478587L, "Петров");
-        book.add(9166598564L, "Сидоров");
-        book.add(9166654120L, "Иванов");
-
+        book.add("Петров", 8962564785L);
+        book.add("Петров", 8962564120L);
+        book.add("Иванов", 8962564785L);
+        book.add("Сидоров", 8962564785L);
         System.out.println(book);
-        System.out.println(book.get("Иванов"));
+        System.out.println(book.phoneBook.get("Петров"));
+
+//        book.add(9161254578L, "Петров");
+//        book.add(9165478963L, "Иванов");
+//        book.add(9165478587L, "Петров");
+//        book.add(9166598564L, "Сидоров");
+//        book.add(9166654120L, "Иванов");
+
+//        System.out.println(book);
+//        System.out.println(book.get("Иванов"));
 
 
     }
-
     static void score(List<String> words) {
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.size(); i++) {
